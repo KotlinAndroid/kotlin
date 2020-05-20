@@ -24,7 +24,8 @@ dependencies {
     runtime(project(":kotlin-reflect"))
 
     embedded(project(":daemon-common")) { isTransitive = false }
-    embedded(project(":daemon-common-new")) { isTransitive = false }
+    // TODO: uncomment when new daemon will be put back into dist
+//    embedded(project(":daemon-common-new")) { isTransitive = false }
     compile(commonDep("org.jetbrains.kotlinx", "kotlinx-coroutines-core")) {
         isTransitive = false
     }

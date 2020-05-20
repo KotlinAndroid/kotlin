@@ -85,7 +85,7 @@ val proguard by task<CacheableProguardTask> {
     dependsOn(relocatedJar)
     configuration("main-kts.pro")
 
-    injars(mapOf("filter" to "!META-INF/versions/**"), relocatedJar.get().outputs.files)
+    injars(mapOf("filter" to "!META-INF/versions/**,!kotlinx/coroutines/debug/**"), relocatedJar.get().outputs.files)
 
     outjars(fileFrom(buildDir, "libs", "$jarBaseName-$version-after-proguard.jar"))
 
